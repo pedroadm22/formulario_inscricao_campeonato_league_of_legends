@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Campeonato LoL 2025 - Inscrições</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="background-pattern"></div>
+    
+    <div class="floating-elements">
+        <div class="floating-icon">⚔️</div>
+        <div class="floating-icon">🏆</div>
+        <div class="floating-icon">⚡</div>
+    </div>
+
+    <div class="container">
+        <div class="header">
+            <h1 class="title">CAMPEONATO LOL 2025</h1>
+            <p class="subtitle">Prove sua habilidade no Rift da Justiça</p>
+        </div>
+
+        <div class="tournament-info">
+            <div class="prize-pool">🏆 PREMIAÇÃO: R$ 50.000</div>
+            <div class="info-grid">
+                <div class="info-item">
+                    <div class="info-label">📅 Data</div>
+                    <div>15-17 de Setembro</div>
+                </div>
+                <div class="info-item">
+                    <div class="info-label">📍 Local</div>
+                    <div>Online + Presencial</div>
+                </div>
+                <div class="info-item">
+                    <div class="info-label">👥 Formato</div>
+                    <div>5v5 Summoner's Rift</div>
+                </div>
+                <div class="info-item">
+                    <div class="info-label">⏰ Inscrições até</div>
+                    <div>31 de Agosto</div>
+                </div>
+            </div>
+        </div>
+
+        <div class="form-container">
+            <h2 class="form-title">🎮 Formulário de Inscrição</h2>
+            
+            <form id="tournamentForm" action="/submit-registration" method="POST">
+                <div class="form-group">
+                    <div class="form-row">
+                        <div>
+                            <label for="playerName">Nome do Jogador <span class="required">*</span></label>
+                            <input type="text" id="playerName" name="playerName" required placeholder="Seu nome completo">
+                        </div>
+                        <div>
+                            <label for="summonerName">Nome de Invocador <span class="required">*</span></label>
+                            <input type="text" id="summonerName" name="summonerName" required placeholder="Seu nick no LoL">
+                        </div>
+                    </div>
+                </div>
+
+                <div class="form-group">
+                    <div class="form-row">
+                        <div>
+                            <label for="email">E-mail <span class="required">*</span></label>
+                            <input type="email" id="email" name="email" required placeholder="seu@email.com">
+                        </div>
+                        <div>
+                            <label for="discord">Discord <span class="required">*</span></label>
+                            <input type="text" id="discord" name="discord" required placeholder="usuario#1234">
+                        </div>
+                    </div>
+                </div>
+
+                <div class="form-group">
+                    <div class="form-row">
+                        <div>
+                            <label for="age">Idade <span class="required">*</span></label>
+                            <input type="number" id="age" name="age" required min="16" max="50" placeholder="18">
+                        </div>
+                        <div>
+                            <label for="region">Servidor <span class="required">*</span></label>
+                            <select id="region" name="region" required class="rank-select">
+                                <option value="">Selecione seu servidor</option>
+                                <option value="BR1">Brasil (BR1)</option>
+                                <option value="NA1">América do Norte</option>
+                                <option value="EUW1">Europa Oeste</option>
+                                <option value="KR">Coreia</option>
+                                <option value="JP1">Japão</option>
+                            </select>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="form-group">
+                    <div class="form-row">
+                        <div>
+                            <label for="currentRank">Elo Atual <span class="required">*</span></label>
+                            <select id="currentRank" name="currentRank" required class="rank-select">
+                                <option value="">Selecione seu elo</option>
+                                <option value="iron">Ferro</option>
+                                <option value="bronze">Bronze</option>
+                                <option value="silver">Prata</option>
+                                <option value="gold">Ouro</option>
+                                <option value="platinum">Platina</option>
+                                <option value="emerald">Esmeralda</option>
+                                <option value="diamond">Diamante</option>
+                                <option value="master">Mestre</option>
+                                <option value="grandmaster">Grão-Mestre</option>
+                                <option value="challenger">Desafiante</option>
+                            </select>
+                        </div>
+                        <div>
+                            <label for="mainRole">Função Principal <span class="required">*</span></label>
+                            <select id="mainRole" name="mainRole" required class="rank-select">
+                                <option value="">Selecione sua função</option>
+                                <option value="top">🛡️ Topo</option>
+                                <option value="jungle">🌲 Selva</option>
+                                <option value="mid">⚡ Meio</option>
+                                <option value="adc">🏹 Atirador</option>
+                                <option value="support">💚 Suporte</option>
+                            </select>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="form-group">
+                    <label for="teamName">Nome do Time (opcional)</label>
+                    <input type="text" id="teamName" name="teamName" placeholder="Se já tem um time formado">
+                </div>
+
+                <div class="form-group">
+                    <label for="experience">Experiência Competitiva</label>
+                    <textarea id="experience" name="experience" rows="4" placeholder="Conte sobre sua experiência em torneios, campeonatos ou ranked..."></textarea>
+                </div>
+
+                <div class="form-group">
+                    <label for="motivation">Por que quer participar?</label>
+                    <textarea id="motivation" name="motivation" rows="3" placeholder="O que te motiva a participar deste campeonato?"></textarea>
+                </div>
+
+                <div class="checkbox-group">
+                    <input type="checkbox" id="terms" name="terms" required>
+                    <label for="terms">Aceito os <a href="#" style="color: #0f86dc;">termos e condições</a> do torneio <span class="required">*</span></label>
+                </div>
+
+                <div class="checkbox-group">
+                    <input type="checkbox" id="newsletter" name="newsletter">
+                    <label for="newsletter">Quero receber novidades sobre futuros torneios</label>
+                </div>
+
+                <button type="submit" class="submit-btn">
+                    ⚔️ INSCREVER-SE NO TORNEIO
+                </button>
+            </form>
+        </div>
+    </div>
+</body>
+</html>
