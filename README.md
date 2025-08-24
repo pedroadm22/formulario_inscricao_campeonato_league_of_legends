@@ -13,8 +13,6 @@ Este projeto foi construído com as seguintes tecnologias:
 -   **HTML5:** Para a estrutura do formulário.
 -   **CSS3:** Para a estilização e design.
 -   **JavaScript:** Para validação de dados e interatividade.
--   [Adicione outras tecnologias, como React, Node.js, etc., se aplicável]
-
 ---
 
 ## ✨ Funcionalidades
