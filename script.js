@@ -25,7 +25,7 @@ inputs.forEach(input => {
         this.parentElement.style.transform = 'scale(1.02)';
     });
     
-    input.addEventListener('blur', function() {
-        this.parentElement.style.transform = 'scale(1)';
-    });
+    // input.addEventListener('blur', function() {
+    //     this.parentElement.style.transform = 'scale(1)';
+    // });
 });
